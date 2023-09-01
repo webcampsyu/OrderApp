@@ -11,5 +11,23 @@ Rails.application.routes.draw do
     registrations: "public/registrations",
     sessions: "public/sessions"
   }
+  
+  namespace :admin do
+    root to: "homes#top"
+    resources :products
+    resources :genres
+    resources :customers
+    resources :orders
+    resources :order_details
+  end
+  
+  scope module: :public do
+    root to: "homes#top"
+    resources :products
+    resources :customers
+    resources :order_items
+    resources :orders
+    resources :site_names
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
