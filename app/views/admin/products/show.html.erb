@@ -20,11 +20,11 @@
         </tr>
         <tr>
           <th>ジャンル</th>
-          <td></td>
+          <td><%= @product.genre.name</td>
         </tr>
         <tr>
           <th>税込価格(税抜価格)</th>
-          <td><%= @product.add_tax_price %>(<%= @product.price %>)</td>
+          <td><%= @product.add_tax_price %>(<%= @product.price %>)円</td>
         </tr>
         <tr>
           <th>販売ステータス</th>
