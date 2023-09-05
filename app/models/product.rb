@@ -1,8 +1,9 @@
 class Product < ApplicationRecord
   
   has_one_attached :image
-  belongs_to :genre_id
+  belongs_to :genre
   has_many :order_details, dependent: :destroy
+  has_many :product_items, dependent: :destroy
   
   validates :image, presence: true
   validates :name, presence: true
