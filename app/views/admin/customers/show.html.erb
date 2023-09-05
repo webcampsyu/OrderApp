@@ -1,18 +1,18 @@
 <div class="container">
-  <h2 class="my-5"><%= @customer.name %>さんの会員詳細</h2>
+  <h2 class="my-5", style="background-color:#d3d3d3;"><%= @customer.name %>さんの会員詳細</h2>
   <div class="row">
-    <div>
+    <div class="col-12">
       <table class="table">
         <tr>
-          <th class="text-center">会員ID</th>
+          <th class="text-left">会員ID</th>
           <td><%= @customer.id %></td>
         </tr>
         <tr>
-          <th class="text-center">工務店名</th>
+          <th class="text-left">工務店名</th>
           <td><%= @customer.name %></td>
         </tr>
         <tr>
-          <th class="text-center">メールアドレス</th>
+          <th class="text-left">メールアドレス</th>
           <td><%= @customer.email %></td>
         </tr>
         <tr>
